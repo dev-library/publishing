@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테이블 병합</title>
+</head>
+<body>
+    <h1>표 만들기</h1>
+    <h2>셀 병합하기</h2>
+    <!--colspan="3"을 주면
+    3칸짜리 컬럼을 1칸처럼 합쳐줍니다.-->
+    <table border="1">
+        <tr>
+            <th colspan="3">공연요금</th>
+        </tr>
+        <tr>
+            <td>구분</td>
+            <td>S석</td>
+            <td>VIP</td>
+        </tr>
+        <tr>
+            <td>성인</td>
+            <td>30,000원</td>
+            <td>50,000원</td>
+        </tr>
+        <tr>
+            <td>청소년</td>
+            <td>20,000원</td>
+            <td>40,000원</td>
+        </tr>
+        <tr>
+            <td>어린이</td>
+            <td colspan="2">보호자 동반시 무료</td>
+        </tr>
+        <tr>
+            <td rowspan="2">공연시간</td>
+            <td>1회</td>
+            <td>12시 ~ 14시</td>
+        </tr>
+        <tr>
+            <td>2회</td>
+            <td>18시 ~ 20시</td>
+        </tr>
+    </table>
+
+
+</body>
+</html>

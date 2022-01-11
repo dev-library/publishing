@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>required 속성</title>
+</head>
+<body>
+    <fieldset>
+        <legend>유효성 검사</legend>
+        <!-- 반드시 입력해야 하는 form 내부의 항목에는 requried를 적어줍니다.-->
+        <form>
+            <ul>
+                <li>
+                    <b>*</b> 이름:<input type="text" required />
+                </li>
+                <li>
+                    <b>*</b> 아이디:<input type="text" required  />
+                </li>
+                <li>
+                    <b>*</b> 비밀번호:<input type="password" required  />
+                </li>
+                <li>
+                    휴대폰: <input type="tel" />
+                </li>
+            </ul>
+            <input type="submit" value="제출" />
+        </form>
+
+    </fieldset>
+</body>
+</html>

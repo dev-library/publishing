@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input과 form</title>
+</head>
+<body>
+    <h1>input 요소들</h1>
+    <!--fieldset은 여닫는 부분 사이를 사각형으로 영역을 만들어줌-->
+    <fieldset>
+        <legend>회원가입</legend>
+        <p>아이디 : <input type="text" /></p>
+        <p>비밀번호 : <input type="password"/></p>
+        <p>메일 수신여부:
+            <input type="radio" name="recieve">예
+            <input type="radio" name="recieve">아니오
+        </p>
+        <p>
+            식사여부 : 
+            <input type="radio" name="eat" />먹음
+            <input type="radio" name="eat" />안먹음
+            <input type="radio" name="eat" />먹는중
+        </p>
+        <p>
+            현재 공부중인것 : 
+            <input type="checkbox" name="study">HTML
+            <input type="checkbox" name="study">CSS
+            <input type="checkbox" name="study">Javascript
+        </p>
+        <p>제출
+            <input type="submit" value="전송">
+            <input type="reset" value="취소">
+        </p>
+    </fieldset>
+</body>
+</html>
