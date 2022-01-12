@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        h1 { color:blue; }
+        h1 + p { background-color: salmon;}
+        p > span { color:rebeccapurple;}
+        .java { border: slateblue 1px solid }
+        .python > h2 { color : magenta; }
+        .python { border: green 1px solid }
+        .cpp {border: 1px solid khaki; color:hotpink;}
+        .java > p {color:lawngreen;}
+        /* 아래의 코드는 좌우폭을 고정해줍니다. */
+        #container { width:600px; }
+        /* 아래의 코드는 상하여백을 없애줍니다. */
+        * { margin:0; }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>프로그래밍 언어들</h1>
+        <p>프로그래밍 언어들에 대해서
+            <span>차근차근</span>
+            설명해드리겠습니다.
+        </p>
+        <ul>
+            <li class="java">
+                <h2>자바</h2>
+                <p>
+                    웹/앱 개발이 모두 됨
+                </p>
+            </li>
+            <li class="python">
+                <h2>파이썬</h2>
+                <p>
+                    머신러닝 등에 특화
+                </p>
+            </li>
+            <li class="cpp">
+                <h2>C++</h2>
+                <p>
+                    게임개발에 특화
+                </p>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

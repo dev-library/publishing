@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* 자식 선택자는
+        부모태그 > 자식태그 방식으로 입력하고
+        두 개 이상의 계층도 지정 가능합니다.
+        단, > 선택자의 경우는
+        맞닿아 있는 관계가 아니라면
+        설령 특정 태그의 하위에 지목된 태그가 있어도
+        적용되지 않습니다 */
+        ul > li > p { color:blue;}
+        body > p { color:red; }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>확정 여행지 목록</h1>
+    <ul>
+        <li><p>2월 : 부산</p></li>
+        <li><p>3월 : 제주</p></li>
+    </ul>
+    <p>4월 울릉도는 미정입니다.</p>
+</body>
+</html>
