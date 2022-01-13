@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* 마진값도 패딩값과 마찬가지로
+        1개를 주면 4방향 전체 일괄적용
+        2개를 주면 상하, 좌우 순으로 적용
+        4개를 주면 시계방향으로 12시부터 적용합니다.
+        단, 마진은 경계선 안쪽과 컨텐츠의 거리가 아닌
+        경계선 바깥쪽에서 얼마나 더 거리를 둘지를
+        설정합니다.*/
+       p.tom {
+           background-color: sandybrown;
+           width:500px;
+           margin:100px 50px 30px 70px;
+        } 
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>오늘의 날씨</p>
+    <p>오늘은 춥습니다.</p>
+    <p>오늘은 비는 안옵니다.</p>
+    <p class="tom">내일은 어떨까?</p>
+</body>
+</html>

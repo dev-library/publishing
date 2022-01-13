@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* 타입선택자나 #(아이디), .(클래스) 선택자가 결합된 형태입니다.*/
+        p.more a { color:red; }
+        /* 준우승 사이트만 위와같이 의존선택자를 이용해 hover시 글씨색이
+        노란색으로 변하도록 해 주세요. */
+        ul.box > li > a#second:hover { color:yellow;}
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>퍼블리싱 대회 결과!</h1>
+    <ul class="box">
+        <li><a href="#">우승 사이트</a></li>
+        <li><a id="second" href="#">준우승 사이트</a></li>
+        <li><a href="#">입상 사이트</a></li>
+    </ul>
+    <p class="more">
+        <a href="#">참여작 보기</a>
+    </p>
+</body>
+</html>
