@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /*
+        display는 박스태그를 블록태그로 만들어주거나
+        블록태그를 박스태그로 만들어주거나 혹은
+        아예 박스자체를 화면에 보이지 않게(코드상으로는 존재)
+        만들어주는 역할을 합니다.
+        display:block; - 해당 요소를 블록속성으로 전환(줄바꿈)
+        display:inline; - 해당 요소를 인라인속성으로 전환(가로로나열)
+        display:inline-block; - 해당 요소를 인라인으로 만들지만
+        블록태그에서만 쓸 수 있던 몇몇 옵션(width, height, padding등)
+        을 쓸 수 있도록 허용
+        display:none; - 해당 요소는 존재하지만 화면에는 표시 안함.
+        */
+        li { 
+            list-style:none; 
+        }
+        body {
+            font: 12px "굴림", Gulim;
+        }
+        a:hover { 
+            color:#369;
+        }
+        /* li가 세로방향(block형식)이 아닌 가로방향(inline형식)으로 나열되도록 처리 */
+        #gnb li { display:inline; }
+        /* li에 내장된 링크주소버튼을 좀 더 예쁘게 꾸미기 */
+        #gnb li a {
+            display:inline-block;
+            background: #c00;
+            color:#fff;
+            width:100px;
+            height:25px;
+            padding-top:10px;
+            text-align:center;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>주 메뉴</h1>
+        <ul id="gnb">
+            <li><a href="#">COMPANY</a></li>
+            <li><a href="#">PRODUCT</a></li>
+            <li><a href="#">SERVICE</a></li>
+            <li><a href="#">COMMUNITY</a></li>
+        </ul>
+    </div>
+</body>
+</html>

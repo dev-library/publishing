@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /*
+            float을 걸고 해제를 할 때
+            float 다음에 올 요소가 있다면
+            그냥 해제하면 되지만
+            만약에 float이 마지막 요소여서
+            clear를 걸어줄 환경이 되지 못한다면,
+            가상요소인 :after를 활용해서
+            가상의 박스를 하나 더 부여해 해제해야 합니다.
+        */
+        #container {
+            width:600px;
+            padding: 10px;
+            background-color: #fdd;
+        }
+        .green {
+            float:left;
+            width:250px;
+            background-color: #dda;
+        }
+        .coffee{
+            float:right;
+            width:250px;
+            background-color: #ba7;
+        }
+        /*
+        다음 요소가 없어서 float을 해제하지 못하는 경우
+        flaot요소의 배경이 되는 태그의 속성이 제대로
+        실행되지 않습니다.
+        따라서 존재하지는 않지만 가상으로 다른 요소가
+        있는것처럼 설정한 다음 float을 해제해주면 됩니다.*/
+        #container:after {
+            clear:both;
+            display:block;
+            content:"";
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1>녹차와 커피</h1>
+        <div class="green">
+            <p>
+                녹차는 은은향 향을 좋아하는 사람들이
+                애용하는 차인데 녹차를 마실줄 모르는
+                사람들은 그냥 대충 티백만 우려내고 마는데
+                녹차를 좋아하는 사람들은 티백을 뜯어서
+                찻잎을 다시 적절하게 보관하기도 합니다.
+                하지만 이렇게 해야만 녹차매니아는 아니고
+                그저 자기가 좋아하는 방법으로 마시는게
+                제일 아닐까 합니다.
+            </p>
+        </div>
+        <div class="coffee">
+            커피는 독한 향을 좋아하는 사람도 좋아하고
+            심지어 어릴때부터 자주 먹은 사람들은
+            내성까지 생기는 경우가 있습니다.
+            예전에는 시럽이나 뭔가 첨가물이 들어간
+            믹스커피 등이 인기가 많았지만 요즘은
+            그냥 커피 자체를 우려낸 아메리카노도
+            각광받고 있습니다.
+            그러나 못 먹는 사람들도 있기 때문에
+            항상 카페등에 모임을 가질때는
+            다른 음료메뉴가 있는지 확인하면 좋습니다.
+            스타벅스는 최근에 4100원짜리 아메리카노를
+            4500원으로 400원 인상했는데 이에 따라
+            소비자 부담도 조금 커질듯 하지만
+            다른 카페는 원래 5000원 넘겼음
+        </div>
+
+    </div><!--#container-->
+
+</body>
+</html>
