@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 사람인지 아닌지 판별할 수 있도록
+        // 여러분들이 prompt를 이용해 문제를 내 주시고
+        // 정답을 적은 경우 조건문을 이용해서
+        // 브라우저 화면에 "사람으로 확인되었습니다."
+        // 정답을 적지 않은 경우 "로봇은 접속할 수 없습니다."
+        // 라고 띄워주시면 됩니다.
+
+        var capitalName = prompt("대한민국의 수도는?");
+        // 자료형은 typeof(자료)로 검사가 가능합니다.
+        console.log(typeof(capitalName));
+        if ( capitalName === '서울'){
+            document.write("<h1>사람으로 확인되었습니다.</h1>");
+        } else {
+            document.write("<h1>로봇은 접속할 수 없습니다.</h1>");
+        }
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
