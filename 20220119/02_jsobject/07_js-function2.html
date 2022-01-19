@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        var num = 0; // 그림 번호
+        function nextPic(){
+            num++; // 다음 그림 번호로 이동
+            if(num > 2){// 마지막 그림번호 초과시
+                num = 0; // 첫 그림 번호로 되돌리기
+            }
+            console.log(document.getElementById("pic"));
+            document.getElementById("pic").src
+                = "img/img" + num + ".jpg";
+                // id가 pic인 요소(그림)의 src 속성을
+                // 1증가된 num을 이용해 바꿔줌
+            return false;
+            // 그림 변경 후 링크 이동을 막기 위해 사용
+        }
+        
+        // 문제1 : prevPic 함수를 만들어서 사진을 뒤로 돌리는
+        // 로직도 추가해주세요.
+        function prevPic(){
+        num--; // 이전 그림 번호로 이동
+        if(num < 0){// 첫 그림보다 작은 번호로 가면
+            num = 2;// 마지막 그림 번호로 적용
+        }
+        
+        document.getElementById("pic").src
+            = "img/img" + num + ".jpg";     
+            
+        return false;
+    }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <h1>이미지 넘기기</h1>
+
+    <img width="500px" src="img/img0.jpg" id="pic">
+    <a href="#" onclick="prevPic()">&lt;&lt;</a>
+    <a href="#" onclick="nextPic()">>></a>
+</body>
+</html>

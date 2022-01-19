@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 배열은 Array()를 활용해 다음과 같이 만듭니다.
+        var nameList = new Array();
+
+        // 인덱싱을 이용한 데이터 저장
+        nameList[0] = "자바스크립트";
+        nameList[1] = "스프링";
+        nameList[2] = "JSP";
+        nameList[3] = "JAVA";
+        nameList[4] = "JPA";
+        nameList[10] = "Spring Security";
+        document.write(nameList + "<br/>");//0번인덱싱
+
+        // 저장공간의 크기를 지정해 생성하기
+        var score = new Array(4);
+        score[0] = 50;
+        score[1] = 68;
+        score[2] = 24;
+        score[3] = 89;
+        score[4] = 100;
+        document.write(score + "<br/>");
+
+        // 생성하면서 데이터까지 넣는 경우
+        var days = new Array("일", "월", "화", "수", "목", "금", "토");
+        document.write(days[5] + "<br/>");
+
+        // 만들어진 days 배열과, new Date()로 생성한 객체를 활용해서
+        // .getDay()로 얻어오는 요일이 숫자가 아닌 요일명으로
+        // 표기되도록 처리해보세요.
+        var today = new Date();
+        var day = today.getDay();
+        document.write(days[day] + "<br/>");
+
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

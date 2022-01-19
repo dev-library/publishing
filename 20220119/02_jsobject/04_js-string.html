@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 자바스크립트도 문자열을 다룰 수 있습니다.
+        // 그래서 문자열을 다루거나 문자열을 생성하기 위해
+        // String이라는 객체를 만들어 사용합니다.
+
+        // 보편적인 생성법
+        var str1 = new String("자바스크립트");
+
+        // 간소화된 생성법
+        var str2 = "자바스크립트"; // 혹은 '자바스크립트'
+
+        // 실제 활용
+        var text = "Javascript is good";
+        document.write(text.bold() + "<br/>");//볼드처리
+        document.write(text.link("https://naver.com") + "<br/>");// a태그생성
+        document.write(text.length + "<br/>");//문자길이
+        document.write(text.toLocaleLowerCase() + "<br/>");//소문자로
+        document.write(text.toUpperCase() + "<br/>");//대문자로
+        document.write(text.indexOf("i") + "<br/>");//해당문자 순번
+        document.write(text.lastIndexOf("i") + "<br/>");//해당문자 뒤에서부터
+        document.write(text.charAt(5) + "<br/>");//해당 인덱스 문자 조회
+        document.write(text.substring(4, 6) + "<br/>");//범위 지정 조회
+        document.write(text.substr(10, 3) + "<br/>");// n번부터 m글자
+        document.write(text.replace("good", "great") + "<br/>");//찾아바꾸기
+        document.write(text.concat("......") + "<br/>");// 문장뒤에 추가붙이기
+        document.write(text.split(" ") + "<br/>");// 띄어쓰기 기준으로 쪼개기
+
+
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

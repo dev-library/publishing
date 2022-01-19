@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 단순하게 수를 더하거나 뺄때는 산술연산자를 쓰지만
+        // 반올림, 최대값, 최소값을 구한다던지 아니면
+        // 난수를 구한다던지 할 때 Math를 사용합니다.
+        // Math에는 static 속성이 있어서 new키워드로 생성을
+        // 하지 않아도 바로 쓸 수 있습니다.
+
+        // Math 실습
+        var maxNum = Math.max(30, 70, 5, 150);
+        document.write("최대값 : " + maxNum + "<br/>");
+
+        var minNum = Math.min(8, 10, 15, 30);
+        document.write("최소값 : " + minNum + "<br/>");
+
+        var roundNum = Math.round(3.5);
+        document.write("반올림 : " + roundNum + "<br/>");
+
+        var ceilNum = Math.ceil(5.1);
+        document.write("소수점올림 : " + ceilNum + "<br/>");
+
+        var floorNum = Math.floor(10.5);
+        document.write("소수점내림 : " + floorNum + "<br/>");
+
+        var absNum = Math.abs(-10);// 절대값, +- 부호없이 숫자만 남김
+        document.write("절대값 : " + absNum + "<br/>");
+
+        var ranNum = Math.random();
+        document.write("0~1 난수 : " + ranNum + "<br/>");
+
+
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 1. img폴더를 02_object폴더 내부에 만들어주세요.
+        // 2. 그림파일 3개를 안에 다운받아주시고
+        // 3. 파일명은 img0, img1, img2로 해주세요.
+        // 4. 난수발생을 통해 그림파일 3개가 랜덤하게
+        // 화면에 표시되도록 코드를 작성해주세요.
+        // 5. 완성된 코드를 저한테 보내주세요.
+
+        // 0~1사이인데, *3을 하면 0~2인데, 여기에 내림처리를 하면
+        // 난수가 0~2범위로 나오게 됩니다.
+        // 내림처리를 안하면 실수이므로 내림처리로 정수로 만듭니다.
+        var imgNum = Math.floor(Math.random() * 3);
+
+        document.write(
+            "<img src='img/img" + imgNum + ".jpg'  width='500px'/>"
+        );
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

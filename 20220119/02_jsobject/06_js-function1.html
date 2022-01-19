@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 자바스크립트의 함수는 기본적으로
+        // function 함수명(파라미터1, 파라미터2...){
+        //     실행문;   
+        // }
+        // 형태로 선언하고
+        // 호출은
+        // 함수명(자료1, 자료2...);
+        // 와 같이 합니다.
+
+        // 1. 함수 선언
+        function greet1(name){
+            alert(name + "님, 안녕하세요.");
+        }
+
+        // 2. 함수 호출
+        //greet1("가나다라");
+
+        // 3. 호출되면 "안녕안녕안녕"이라고 경고창을
+        // 띄우는 함수를 greet2 라는 명칭으로
+        // 생성해주세요. 요청자료는 없습니다.
+        function greet2(){
+            alert("안녕안녕안녕");
+        }
+        // 4. 함수 호출을 해 보세요.
+        //greet2();
+
+        // 5. 함수 하나를 임의로 만들어주시고
+        // 버튼2를 만들어서 클릭시 호출되게 작성한 다음
+        // 함수 정의부와, 버튼쪽 코드를 저한테 보내주세요.
+        function info(){
+            alert("사실 아무 기능이 없는 버튼입니다.");
+        }
+
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--특정 요소에 onclick="실행문" 속성은
+    클릭되었을때 해당 코드를 실행합니다.
+    지금은 버튼 클릭시 greet2 함수를 호출하도록
+    지정했습니다.-->
+    <button onclick="greet2();">버튼</button><br/>
+    <button onclick="info();">버튼2</button><br/>
+
+</body>
+</html>
+
+
+
+
+

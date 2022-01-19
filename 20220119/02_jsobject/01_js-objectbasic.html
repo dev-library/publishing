@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 자바스크립트 역시 자바처럼 new 키워드를 이용해
+        // 클래스를 만들고, 그 클래스의 객체를 생성해서
+        // 사용합니다.
+        // 역시 JS에서의 클래스의 목적도 변수와 함수를
+        // 같은 소속으로 담아 사용하기 위함이며
+        // 마치 자바의 java.util.* 과 같이
+        // 미리 만들어져있는 내장클래스를 쓸 수도 있습니다.
+        
+        // 내장클래스로 대표적인 예시는 document가 있고
+        // 이외에도 Date, Array, Math 등 자바와 유사한
+        // 여러 종류의 객체들이 있습니다.
+
+        // 날짜 관련 객체 Date 활용
+        document.write("<h1>현재날짜/시간정보</h1>");
+
+        var today = new Date();// 날짜정보를 담당하는 클래스의 객체(변수)를 생성;
+        var nowYear = today.getFullYear(); // 연도 얻어오기
+        document.write("년도 : " + nowYear + "<br/>");
+        var nowMonth = today.getMonth() + 1; // 월 얻어오기(0~11월로 집계됨)
+        document.write("월 : " + nowMonth + "<br/>");
+        var nowDate = today.getDate();// 일 얻어오기
+        document.write("일 : " + nowDate + "<br/>");
+        var nowDay = today.getDay();// 요일 얻어오기(0:일 ~ 6:토)
+        document.write("요일 : " + nowDay + "<br/>");
+        // 시 : Hours, 분 : Minutes, 초 : Seconds입니다.
+        // 셋 다 얻어와서 화면에 출력해보세요.
+        var nowHour = today.getHours(); // 시간 얻어오기
+        document.write("시 : " + nowHour + "<br/>");
+        var nowMinute = today.getMinutes(); // 분 얻어오기
+        document.write("분 : " + nowMinute + "<br/>");
+        var nowSecond = today.getSeconds(); // 초 얻어오기
+        document.write("초 : " + nowSecond + "<br/>");
+        // 유닉스시간
+        // 1970년도 1월 1일 00시 00분 00초 를 기점으로 몇 초나 흘러갔는지
+        // 집계하는 방식의 시간표기법
+        var nowTime = today.getTime(); // 유닉스시간 얻어오기
+        document.write("유닉스시간 : " + nowTime + "<br/>");
+
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
