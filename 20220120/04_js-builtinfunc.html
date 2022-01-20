@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 자바스크립트는 사용자 편의를 위해서
+        // 기본적인 기능을 내장함수로 제공하고 있습니다.
+        // 자바스크립트의 내장함수들을 정리해보겠습니다.
+        // eval() - 문자열을 자바스크립트 코드로 변환
+        // parseInt() - 숫자를 정수로 변환
+        // parseFloat() - 숫자를 실수로 변환
+        // isNaN() - Not a Number로, 숫자로 판단이 안 되는
+        //           수치데이터를 감별해 맞으면 true로 리턴
+        // isFinite() - 주어진 값이 유리수인지 여부 판단
+        // Number() - 문자를 숫자형으로 변환
+        // String() - 숫자를 문자형으로 변환
+        // escape() - 문자를 16진수 아스키코드로 변환
+        // unescape() - escape()로 변환된 아스키코드를 문자로 변환
+        var result1 = eval("10 + 20;");// 10+20;으로 변환되어 실행
+        document.write(result1 + "<br/>");
+
+        var num = 100;
+        document.write("num" + 10 + "<br/>");
+
+        document.write(eval("num") + 10 + "<br/>");
+        // 문자 num을 코드로 변환해 변수 num으로 사용
+        var infiniteValue = 1 / 0; // 0으로 나눌 수 없어 무한대 값이 나옴
+        var result2 = isFinite(infiniteValue);
+
+        // 에러를 발생 X(주의)
+        document.write(infiniteValue + "<br/>");
+        document.write(result2 + "<br/>");
+
+        var result3 = isNaN(1 / "가"); // 1을 "가"로 나눌 수 없어
+        document.write(1/"가" + "<br/>");
+        document.write(result3 + "<br/>");// 진행은 되나 숫자가 아님.
+
+
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

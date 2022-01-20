@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 문제
+        // confirm, 조건문, location을 이용해서
+        // 현재 페이지를 보시겠습니까? 라고 먼저 물어보고
+        // 확인을 누르면 body태그 내에 h1태그를 자유롭게 적어서
+        // 그 내용이 보이도록 해 주시면 되고
+        // 그렇지 않다면 네이버로 이동하도록
+        // 만들어주세요.
+        var result = confirm("현재 페이지를 보겠습니까?");
+
+        if(!result){
+            location.href="https://www.naver.com";
+        }
+
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>네이버대신 여기로 왔습니다.</h1>
+</body>
+</html>

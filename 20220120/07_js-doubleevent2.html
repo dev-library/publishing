@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+      // DOM LEVEL 2 방식에서는 한 번에 2개 이상의 이벤트를
+      // 연결할 수 있습니다.
+      // 이 방식은 꼭 필요한 방식은 아니지만 여러 브라우저 지원을
+      // 위해 이벤트 연결시 if~else문을 사용합니다.  
+      // 문법)
+      // if(window.addEventListener){// 크롬, 파폭등(표준)
+      //    이벤트 등록 코드;
+      // } else if(window.attachEvent){// 익스플로러 등(비표준)
+      //    이벤트 등록 코드;
+      // }
+
+      // 표준 브라우저상 등록하기
+      // 이벤트대상.addEventListener("이벤트", "함수", false);
+
+      // 비표준 브라우저상 등록하기
+      // 이벤트대상.attachEvent("on이벤트명", 함수명);
+
+      // 예시코드
+      function theFnc(){
+          alert("작동되는 경고창");
+      }
+
+      function clickBtn1(){// 이벤트 연결용 함수 1
+        var myBtn1 = document.getElementById("btn1");
+        myBtn1.onclick = theFnc;
+      }
+
+      function clickBtn2(){// 이벤트 연결용 함수 2
+        var myBtn2 = document.getElementById("btn2");
+        myBtn2.onclick = theFnc;
+      }
+     if(window.addEventListener){// 신형브라우저
+        window.addEventListener("load", clickBtn1, false);
+        window.addEventListener("load", clickBtn2, false);
+      } else if(window.attachEvent){// 구형브라우저
+        window.attachEvent("onload", clickBtn1);
+        window.attachEvent("onload", clickBtn2);
+      }
+    
+
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">버튼1</button>
+    <button id="btn2">버튼2</button>
+</body>
+</html>

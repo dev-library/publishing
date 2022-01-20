@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 자바스크립트는 따로 메인메서드가 없고
+        // 그냥 script 태그를 위에서 아래방향으로
+        // 순차적으로 실행하기 때문에
+        // {} 사이에 있지 않은 변수는
+        // 전부 전역변수로 간주합니다.
+        // 중괄호 내부에 속해있지 않은 변수는
+        // 사실상 모든 지역에서 참조 가능합니다.
+        var num;
+
+        function theFnc(){
+            num = 30;
+        }
+
+        theFnc();
+        console.log(num);
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>

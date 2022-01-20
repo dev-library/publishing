@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 자바스크립트에서는 다양한 방식으로 이벤트를
+        // 통제할 수 있습니다.
+        // 아래 이벤트 함수들을 모두 자주 쓰는것은 아니지만
+        // 한 번 정리해보고 실습해보겠습니다.
+
+        // onload = 문서가 모두 로드되면 이벤트 발생(*많이씀)
+        // onunload = 문서 종료시 이벤트 발생
+        // ondblclick = 해당 요소를 더블 클릭시 발생
+        // onclick = 해당 요소를 한 번 클릭시 발생(*많이씀)
+        // onkeypress = 해당 키를 눌렀을때 발생
+        // onkeydown = 해당 키가 눌려졌을때 발생(위와 거의 동일)
+        // onkeyup = 해당 키를 눌렀다 뗄 때 발생
+        // onmouseover = 마우스 커서가 대상에 올려지면 발생
+        // onfocus = (탭키등으로)해당 요소가 타겟으로 잡힐대 발생
+        // onmouseout = 대상에서 마우스 커서가 벗어나면 발생
+        // onblur = onfocus상태에서 벗어나면 발생
+        // onsubmit = 전송버튼을 눌렀을 때 발생(*많이씀)
+        // onreset = 취소버튼을 눌렀을때 발생
+        // onchange = 입력요소 값이 변경되면 발생(*많이씀)
+        // onmousemove = 마우스를 움직일 때마다 발생
+        // onresize = 브라우저 창크기가 조절될 때 발생
+        // onerror = 문서 이미지 불러오는 도중 에러발생시 발생
+        // onabort = 문서 이미지 불러오다 중단되면 발생
+        
+        // 코드 로딩 전 요소를 받아오려다 null이 나는 방식
+        // #noData 를 변수 h1Tag에 저장해 주신 다음
+        // 콘솔에 찍어보세요.
+        // h1태그가 인식되기 전에(아래쪽 코드를 읽기 전에)
+        // JS코드가 먼저 실행되면서(body태그 위쪽에 있으므로)
+        // 인식이 안 되어 null이라고 나옴
+        //var h1Tag = document.getElementById("noData");
+        //console.log(h1Tag);
+
+        // 코드 로딩 후에 데이터를 얻어오도록 처리
+        window.onload = function(){
+            // window.onload = 함수(){
+            //     실행문; 은 무조건 문서가 다 로딩된 다음 실행됨
+            // }    
+                var h1Tag = document.getElementById("noData");
+                console.log(h1Tag);
+        }
+        
+
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="noData">테스트</h1>
+
+    <script>
+        // body태그 내부 모든 요소를 다 로딩한다음
+        // 코드가 실행되도록 body태그 제일 하단에 script태그를
+        // 작성하는 해결방법이 있음.
+        //var h1Tag = document.getElementById("noData");
+        //console.log(h1Tag);
+    </script>
+</body>
+</html>

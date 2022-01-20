@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 자바스크립트에서도 클ㄹ스를 사용할 수 있고
+        // 클래스 키워드도 쓸 수 있지만 원시적인 형태는
+        // 함수를 이용해 클래스를 만드는 것이었습니다.
+        // 그래서 우선 함수를 이용해 클래스를 구성하는것부터
+        // 살펴보겠습니다.
+        // 문법)
+        // function 클래스명(자료1, 2, ...){
+        //     this.변수1 = 자료1;
+        //     this.변수2 = 자료2;
+        //     this.변수3 = 자료3;...
+        //
+        //     this.함수명1 = function(){
+        //         실행문;
+        //     }
+        // }
+
+        // 클래스 목적으로 사용하는 생성자 함수
+        function computer(cpuInfo, ramInfo, ssdInfo){// computer 클래스 정의
+            this.cpu = cpuInfo; // 멤버변수 cpu 선언
+            this.ram = ramInfo; // 멤버변수 ram 선언
+            this.ssd = ssdInfo; // 멤버변수 ssd 선언
+
+            this.totInfo = function(){ // 함수도 일급객체라 변수에 저장
+                document.write("제조업체 : AMD <br/>");
+                document.write("시스템 : 64bit<br/>");
+            }
+        }
+
+        // new 키워드를 사용해 myCom변수에 컴퓨터를 생성해 저장해주세요.
+        var myCom = new computer("AMD", "32gb", "1TB");
+        // document.write를 이용해 생성한 myCom의 멤버변수들을
+        // 하나하나 화면에 출력해주세요.
+        document.write(myCom.cpu + "<br/>");
+        document.write(myCom.ram + "<br/>");
+        document.write(myCom.ssd + "<br/>");
+        // 선언되어있는 totInfo()를 호출해보세요.
+        myCom.totInfo();
+    </script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
