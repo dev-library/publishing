@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // #h1space 내부에 #createh1을 클릭할때마다
+        // h1태그(넣고싶은 단어는 마음대로 넣어주세요)가 새ㅐㅇ성되는
+        // 로직을 작성해주쉐요.
+    // 문서 모두 로딩 후 실행할 자바스크립트 코드들
+    window.onload = function(){
+       // 버튼 가져오기
+       var ch1 = document.getElementById("createh1");
+       // h1을 적재할 태그 가져오기
+       var h1space = document.getElementById("h1space");
+       
+       // 버튼에 onclick 이벤트 연결
+       ch1.onclick = function(){
+        // h1 생성
+        var newH1 = document.createElement("h1");
+        // h1에 끼워넣을 텍스트 생성
+        var text = document.createTextNode("증식하는 h1");
+        // text를 h1에 조립하기
+        newH1.appendChild(text);
+        // 조립완료된 h1을 h1space에 끼워넣기.
+        h1space.appendChild(newH1);
+       } 
+    }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="h1space">
+
+    </div>
+    <button id="createh1">생성</button>
+</body>
+</html>

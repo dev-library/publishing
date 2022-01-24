@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // DOM 내부 요소를 고치는 작업을 해보겠습니다.
+        // DOM 조작과 onclick 이벤트를 같이 조합해서
+        // 사용자가 특정 요소를 클릭했을 때
+        // DOM 조작이 일어나도록 합니다.
+        // DOM조작 이라는 용어는 그냥 html화면에
+        // 변화를 주는 작업이라고 생각하셔도 됩니다.
+
+        // 모든 문서 로딩이 끝나고 스크립트를 실행하도록 초기세팅
+        window.onload = function(){
+            // #number, #increase, #decrease를 각각
+            // 변수 number, incBtn, decBtn에 저장해주세요.
+            var number = document.getElementById("number");
+            var incBtn = document.getElementById("increase");
+            var decBtn = document.getElementById("decrease");
+            
+            console.log(number.parentNode);
+            // #increase, #decrease의 부모태그 접근을 이용해
+            // body태그를 마찬가지로 화면에 찍어보세요.
+            console.log(incBtn.parentNode);
+            console.log(decBtn.parentNode);
+
+            // div를 변수에 저장하고 콘솔에 찍어주세요.
+            // tagName으로 얻어와주세요.
+            // div가 콘솔에 정확하게 찍히게 해주세요.
+            var div = document.getElementsByTagName('div');
+            console.log(div);
+
+            // childNodes는 자식태그들을 얻어옵니다.
+            // 단, 자식태그에서는 html문서상 개행을 위해 친
+            // 엔터키까지 text로 잡혀오니 주의해주세요.
+            // div태그(변수)의 자식을 콘솔에 찍어보세요.
+            console.log(div[0].childNodes);
+
+            // children으로 자식태그를 얻어오면
+            // childNodes와 유사하지만 엔터키로 개행된 부분은
+            // 따로 가져오지 않고 태그요소만 가져옵니다.
+            console.log(div[0].children);
+
+            // 일일이 인덱싱으로 가져오기 복잡한 경우
+            // 첫 번째나 마지막 요소 등은 근접선택자에서
+            // 따로 선택할 수 있는 옵션을 제공합니다.
+            // firstChild - 첫 번째 자식태그
+            // lastChild - 마지막 자식태그
+            console.log(div[0].firstChild);
+
+            // previousSibling, nextSibling을 통해
+            // 형제 태그간 순번을 하나씩 뒤로 넘기거나
+            // 하나씩 앞으로 가져올 수 있습니다.
+            // #reset을 잡아서 변수에 저장해주시고
+            // 위 두 명령어를 이용해 increase와
+            // decrease를 콘솔에 직어보세요.
+            var resetBtn = document.getElementById("reset");
+            // nextSibling은 태그인지 아니면 엔터키에 의한 개행인지 구분 X
+            console.log(resetBtn.nextSibling.nextSibling);
+            console.log(resetBtn.previousSibling.previousSibling);
+            // tag요소들끼리만 잡아서 가져오고싶다면
+            // html에서는 태그요소를 element(요소)라고 부릅니다.
+            // 따라서 n/pElementSibling을 사용하시면
+            // 태그끼리로만 다음요소, 이전요소를 구분합니다.
+            console.log(resetBtn.nextElementSibling);
+            console.log(resetBtn.previousElementSibling);
+
+            // 이제 이벤트를 자바스크립트로 붙여서
+            // 버튼 클릭시 숫자값이 변하도록 해보겠습니다.
+
+            // innerText는 여닫는 태그 사이의 텍스트를 의미합니다.
+            console.log(number.innerText);
+
+            // onclick은 태그 내에 onclick="함수명();" 형식으로 연결할수도 있지만
+            // 얻어온변수.onclick = function(){}; 형식으로도 지정할 수 있습니다.
+            // incBtn에 onclick을 걸어서 클릭할때마다
+            // number의 innerText값이 1씩 증가하도록 고쳐주세요.
+            // innerText로 얻어오는 자료는 무조건 String으로 간주되므로
+            // parseInt()를 써서 int화시키는 작업이 필요합니다.
+
+            // 먼저, incBtn을 클릭하면, number의 innerText값이 콘솔에 찍히게 해주세요.
+            incBtn.onclick = function(){
+                number.innerText = parseInt(number.innerText) + 1;
+            }            
+
+            // 위의 미션을 완료하신 분들은 reset, decrease 버튼에도 이벤트를 적절하게 걸어주세요.
+            reset.onclick = function(){
+                number.innerHTML = 0;
+            }
+
+            decBtn.onclick = function(){
+                number.innerText = parseInt(number.innerText) - 1;
+            }            
+            // div 태그 내에 #red, #blue, #black 버튼을 추가해주세요.
+            // 각 버튼 클릭시 #number 의 글씨색이 해당 버튼에
+            // 적힌 색깔로 바뀌게 해주세요.
+            var redBtn = document.getElementById("red");
+            
+            redBtn.onclick = function(){
+                number.style.color="red";
+            }
+
+            var blueBtn = document.getElementById("blue");
+            var blackBtn = document.getElementById("black");
+
+            blueBtn.onclick = function(){
+                number.style.color="blue";
+            }
+            blackBtn.onclick = function(){
+                number.style.color="black";
+            }
+        }
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="number">0</h2>
+    <div>
+        <button id="increase">+1</button>
+        <button id="reset">0</button>
+        <button id="decrease">-1</button>
+        <br/>
+        <button id="red">빨강</button>
+        <button id="blue">파랑</button>
+        <button id="black">검정</button>
+    </div>
+</body>
+</html>

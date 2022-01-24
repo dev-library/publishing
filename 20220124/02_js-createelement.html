@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 01번 파일을 통해 텍스트를 집어넣는 로직을 연습해봤습니다.
+        // 이번 파일에서는 태그 사이에 새로운 자식태그를
+        // 끼워넣는 방법에 대해 알아보겠습니다.
+
+        // 순서
+        // 1. createElement를 이용해 태그를 생성합니다(위치지정은 안 됨)
+        // 2. 생성된 태그 내부의 내용물이 필요하다면 채워줍니다.(innerText등)
+        // 3. DOM요소에 appendChild를 이용해 넣어줍니다.
+
+        // 태그 로딩 후 자바스크립트 코드가 돌아가게 처리해주세요.
+        window.onload = function(){
+            
+            // 태그 요소 생성(위치는 없음)
+            var newPTag = document.createElement("p");
+            console.log(newPTag);
+            // newBtn1, 2를 위의 방식을 따라 만들어주세요.
+            var newBtn1 = document.createElement("button");
+            var newBtn2 = document.createElement("button");
+            console.log(newBtn1);
+            console.log(newBtn2);
+
+            // 태그 내부에 들어갈 문자는, 먼저 createTextNode로
+            // 생성을 해두고(집어넣지는 않음)
+            // 추후에 특정 태그에 집어넣겠다고 명령을 한 번 더 내려야 합니다.
+            var text1 = document.createTextNode("버튼1");
+            console.log(text1);
+            var text2 = document.createTextNode("버튼2");
+            console.log(text2);
+
+            // 태그 내부에 text 집어넣기
+            // .appendChild(자식요소); 를 넣으면
+            // 태그를 넣는경우 자식태그로 들어가고
+            // 텍스트로 넣는경우 태그 사이의 텍스트로 들어갑니다.
+            newBtn1.appendChild(text1);
+            newBtn2.appendChild(text2);
+            // p태그 사이에 버튼 2개를 넣어주세요.
+            newPTag.appendChild(newBtn1);
+            newPTag.appendChild(newBtn2);
+
+            // 속성 부여하기
+            // id, class등을 부여합니다.
+            // 요소명.setAttribute("속성명", "부여할 값");
+            // id에 btn1을 부여하는 경우
+            newBtn1.setAttribute("id", "btn1");
+            newBtn2.setAttribute("id", "btn2");
+
+            // body태그에 위에서 생성한 <p></p>를 끼워넣어주세요.
+            var bodyTag = document.getElementsByTagName("body");
+            console.log(bodyTag);
+            bodyTag[0].appendChild(newPTag);
+            console.log(bodyTag[0]);
+            
+
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="theBox">
+        <h1>요소 생성 연습</h1>
+    </div>
+</body>
+</html>

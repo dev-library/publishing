@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        // 원거리 선택자.
+        // 태그에 지정한 id를 이용ㅎ 특정 태그만 선택할 수 있는 선택자입니다.
+        // 선택대상.getElementById("아이디명");
+
+        // 문서 로딩이 끝난 다음에 자바스크립트를 실행해도록
+        // window.onload 내부에 작성하겠습니다.
+        // 아래에 window.onload 세팅을 해주세요.
+        window.onload = function(){
+            // 여기에 작성해야 정상실행
+            var myObj = document.getElementById("title");
+            console.log(myObj);
+            // #title요소를 가져와서 글씨색을 파란색으로 변경
+            myObj.style.color = "blue";
+
+            // 특정 태그들을 들고오기
+            // 선택대상.getElementsByTagName("태그명");
+
+            // 1. ul태그 전체를 가져와보세요
+            // 변수명은 myList입니다
+            // document가 현재 보고있는 전체 문서입니다.
+            var myList = document.getElementsByTagName("ul");
+            console.log(myList);
+
+            // getElementsByTagName등과 같이 s로 끝나는 선택자들은
+            // list로 요소를 가져오기 때문에
+            // 인덱싱해서 원하는 자료를 얻습니다.
+            // 처음으로 나온 ul 조회
+            console.log(myList[0]);
+            // 1번 인덱스로 잡히는 ul#list 조회
+            console.log(myList[1]);
+            
+            // 이번에는 문서 전체를 범위로 하지 않고,
+            // 0번째 ul에서 li태그만 모아주세요.
+            // 변수이름은 myLi입니다.
+            // hint : <ul> ... </ul>도 DOM 구조를 가지고 있습니다.
+            // ul > li 와 같은 효과가 됨(myList는 ul들 모음 > li만 얻어왔으므로)
+            var myLi = myList[0].getElementsByTagName("li");
+            console.log(myLi);
+
+            // myLi에 대해 반복문으로 테두리를 쳐 주세요.(hint * -> style.테두리선 = "설정값";)
+            for(var i = 0; i < myLi.length; i++){
+                myLi[i].style.border = "3px violet solid";
+            }
+
+            // getElements 계열은 자료를 가져올때 리스트로 가져옵니다.
+            // 설령 내부에 가져올 수 있는 자료가 하나여도 리스트로 가져옵니다.
+            var myH1 = document.getElementsByTagName("h1");
+            console.log(myH1[0]);
+
+            // 아래쪽 ul태그에 대해서
+            // 근거리 선택자의 li는 홀수번째는 green으로
+            // 짝수번째는 gold으로 배경색을 쳐주세요
+            // .style.backgroundColor="색깔";
+
+            // 아래쪽 ul#list에서 li만 6개 받아와 ulLi 변수에 저장하기.
+            var ulLi = myList[1].getElementsByTagName("li");
+            console.log(ulLi);
+            for(var i = 0; i < ulLi.length; i++){
+                //조건문으로 홀,짝수 번째 따로 처리   
+                if(i % 2 !== 0){
+                    ulLi[i].style.backgroundColor="gold";// gold색으로처리
+                } else {
+                    ulLi[i].style.backgroundColor="green";// green색으로 처리
+                }
+            }
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>선택자</h1>
+        <h2 id="title">원거리 선택자</h2>
+        <ul>
+            <li>getElementById</li>
+            <li>getElementsByTagName</li>
+        </ul>
+        <h2>근거리 선택자</h2>
+        <ul id="list">
+            <li>parentNode</li>
+            <li>childNodes</li>
+            <li>children</li>
+            <li>firstChild</li>
+            <li>previousSibling</li>
+            <li>nextsibing</li>
+        </ul>
+    </div>
+</body>
+</html>
