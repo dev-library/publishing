@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--head 사이에 이렇게 붙여넣기 하면 적용 끝-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // jquery는 자바스크립트를 활용한 dom 조작을
+        // 좀 더 편하게 하기 위해 나온 라이브러리입니다.
+        // 부트스트랩처럼 CDN형식이나 혹은 jquery.js 파일을
+        // 받아 import 해야 해당 문서에서 사용 가능합니다.
+        // 일부 부트스트랩 기능도 jquery가 같이 사용되어야
+        // 돌아가기 때문에 여전히 가장 사랑받는 라이브러리중
+        // 하나이지만 최근 사이트가 무거워지는 이유로 인해
+        // 초대형 서비스에서는 점차 사장되어가는 분위기입니다.
+
+        // 제이쿼리를 적용하고 싶다면 먼저
+        // 1. jquery라고 구글링해서 접속.
+        // 2. 메인페이지에서 다운로드 클릭.
+        // 3. other cdn에서 google cdn 선택 후 3.x 복붙
+
+        // jquery 사용법.
+        // window.onload = function(){} 을 jquery에서는
+        // $(document).ready(function(){});
+        // 위의 요소로 대신합니다.
+
+        // 하지만 (document).ready를 추가로 생략 가능하므로 최종적으로
+        // 아래와 같이 작성해 쓸 수 있습니다.
+        $(function(){
+            // 앞으로 jquery에서는
+            // document.getElement(s)By~~~ 시리즈 대신
+            // $() 를 이용해 요소를 잡아옵니다.
+            
+            //$("*").css("font-size", "13px");// 전체 선택자
+            // h1태그를 선택해 글씨색을 빨간색으로 변경
+            $("h1").css("color", "red");// 태그 선택자
+            // #firstTitle의 색깔을 녹색으로 바꿔주세요.
+            $("#firstTitle").css("color", "green"); // 아이디 선택자
+            // .nextTitle의 색깔을 파란색으로 바꿔주세요.
+            $(".nextTitle").css("color", "blue");// 클래스 선택자
+            // .obj3 의 자식인 li의 font-weight을 bold로 바꿔주세요.
+            $(".obj3 > li").css("font-weight", "bold");// 자식선택자
+            // .obj3의 자식인 .theObj1의 색깔을 보라색으로
+            $(".obj3").children(".theObj1").css("color", "purple");//자식선택자2
+
+            // .obj5의 부모 전체의 테두리를 2px검은색 점선으로 해주세요.
+            $(".obj5").parent().css("border", "2px dashed black");
+
+            // #wrap 자손 h3에 대해 글씨크기 20px, 배경색 노란색
+            $("#wrap h3").css("font-size", "20px").css("background-color", "yellow");
+
+            // .obj4의 next의 색깔을 orange로 바꿔주세요.
+            // .next()는 바닐라js의 nextSibling처럼 사용됩니다.
+            $(".obj4").next().css("color", "orange");
+
+            // .obj5의 prev의 정렬을 글씨 우측정렬로 해주세요.
+            // .prev()는 바닐라 js의 previousSibling처럼 사용됩니다.
+            $(".obj5").prev().css("text-align", "right");
+
+            // .obj6의 형제인 "li" 전체에게 글씨 가운데 정렬
+            // .siblings("li")를 하면 형제요소 중 li만 선택됩니다.
+            $(".obj6").siblings("li").css("text-align", "center");
+
+            // 이렇게 $("선택자") 로 얻어온 dom 요소는
+            // 변수에도 저장이 됩니다.
+            var cobj6 = $(".obj6");
+            console.log(cobj6);
+
+            // html문서 내부의 폼요소를 선택할 때는
+            // $(":타입명") 으로 타입에 따라 선택할 수 있습니다.
+            // 선택가능 타입은 text, password, checkbox, radio등이 있습니다.
+            // text타입 input의 배경을 노란색으로
+            // 경계는 3px로 실선 검정색으로
+            // 글씨색은 파란색으로 바꿔주세요.
+            $(":text").css({
+                "background-color":"yellow",
+                "color":"blue",
+                "border":"3px solid black"   
+            });// 소괄호, 중괄호 순서 주의하기
+
+        });
+
+
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrap">
+        <h1>제이쿼리</h1>
+        <h2 id="firstTitle">선택자</h2>
+        <h3 class="nextTitle">부모 요소 선택자</h3>
+        <p class="obj1">
+            현재 id가 "obj"인 요소를 기준으로,
+            부모 요소는 'div'요소입니다.
+        </p>
+    </div>
+    <h3>자식 요소 선택자</h3>
+    <ul class="obj3">
+        <li>리스트 1</li>
+        <li class="theObj1">리스트2</li>
+        <li>리스트 3</li>
+    </ul>
+    <h3>형 요소 선택자></h3>
+    <ul>
+        <li>리스트 4</li>
+        <li class="obj4">리스트 5</li>
+        <li>리스트 6</li>
+    </ul>
+    <h3>동생 요소 선택자</h3>
+    <ul>
+        <li>리스트 7</li>
+        <li class="obj5">리스트 8</li>
+        <li>리스트 9</li>
+    </ul>
+    <h3>형제 요소들 선택자</h3>
+    <ul>
+        <li>리스트 10</li>
+        <li class="obj6">리스트 11</li>
+        <li>리스트 12</li>
+    </ul>
+    <h3>입력 요소 선택자</h3>
+    <p>
+        <label for="user_name">이름</label>
+        <input type="text" name="user_name" id="user_name" />
+    </p>
+</body>
+</html>

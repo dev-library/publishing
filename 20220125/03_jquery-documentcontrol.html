@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--jquery cdn을 입력해주세요.-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // 문서 객체 조작 메서드
+        // element내용을 바꾸거나 생성하거나 끼워넣거나
+        // 하는 일련의 과정을 수행합니다.
+
+        // 메서드 종류
+        // $("선택자").html() - 선택요소의 하위요소 다 얻어오기
+        // $("선택자").html("새요소") - 선택요소 하위요소 변경
+        // $("선택자").text("텍스트") - 선택요소 내부텍스트 변경
+        // $("새요소") - createElement처럼 새 태그 생성
+        // $("선택자").append(새요소) - 선택요소에 새 요소 끼우기
+        // $("선택자").prepend(새요소) - 선택요소에 새 요소 끼우기
+        // $("선택자").appendTo("새요소") - 선택요소에 새 요소 끼우기
+        // $("선택자").prependTo("새요소") - 선택요소에 새요소 끼우기
+        // $("선택자").insertBefore("새요소") - 선택요소의 형제요소 추가
+        // $("선택자").insertAfter("새요소") - 선택요소의 형제요소 추가
+        // $("선택자").clone(true/false) - 요소 복사(하위요소 복사여부)
+        // $("선택자").remove() - 선택요소 삭제
+        // $("선택자").empty() - 하위요소 모두 삭제
+        // $("선택자").attr("속성") - 특정속성 지정(class, id 등)
+        // $("선택자").attr("속성", "값") - 속성값 갱신
+        // $("선택자").addClass("클래스명") - 새로운 클래스명 부여
+        // $("선택자").removeClass("클래스명") - 클래스 속성 해제
+        // $("선택자").toggleClass("클래스명") - 클래스명 없으면 추가, 있으면 삭제
+        // $("선택자").hasClass("클래스명") - 선택요소에 클래스속성 있으면 true
+        // $("선택자").wrap("<div></div>") - 선택요소를 감싸는 div태그 생성
+        // $("선택자").wrapAll("<div></div>") - 선택요소를 전체 감싸는 div 생성
+
+        // 제이쿼리를 활용한 문서 조작
+
+        // 문서 로딩 후 실행할 수 있도록 세팅해주세요.
+        // 익명함수(function 키워드를 쓰면서 함수명을 따로 안 적은 함수)
+        // 는 => (arrow)로 대신할 수 있습니다.
+        // 화살표 함수(arrow function)은 ES6에 신규로 추가된 문법입니다.
+        $(() => {
+            // 1. .theTitle인 요소의 하위 요소를
+            // "<a href='#'>요소 객체 조작</a>"로 바꿉니다.
+            $(".theTitle").html("<a href='#'>요소 객체 조작</a>");
+
+            // 2. .obj1인 요소의 텍스트를 "리스트_2"로 바꿉니다.
+            $(".obj1").text("리스트_2");
+
+            // 3. #list3인 요소의 마지막에 새 요소를
+            // 아래와 같이 추가합니다.
+            // "<li>list_6</li>"(*hint - .append()를 써보세요.)
+            $("#list3").append("<li>list_6</li>");
+            console.log($("#list3").children());
+
+            // 4. #list3인 요소의 처음에 새 요소를
+            // 아래와 같이 추가합니다.
+            //"<li>list_1</li>"
+            $("#list3").prepend("<li>list_1</li>");
+
+            // 5. #list3인 5번째 li요소 이전에 새 요소를
+            // 아래와 같이 추가합니다.
+            // "<li>insertBefore</li>"
+            //  insertBefore와 .eq(번호) 를 쓰세요
+            // $("")를 이용해 먼저 생성하고
+            // .insertBefore()를 이용합니다.
+            $("<li>insertBefore</li>").insertBefore($("#list3 li").eq(4));
+
+            // 6. #list3인 6번째(5) li요소 이후에 새 요소를
+            // 아래와 같이 추가합니다.
+            // "<li>insertAfter</li>"
+            // insertAfter와 eq를 쓰시면 됩니다.
+            $("<li>insertAfter</li>").insertAfter($("#list3 li").eq(5));
+
+            // 7. .obj1인 요소 복제 후 id가 list3인 요소의
+            // 가장 마지막 위치에 추가해주세요.
+            // .clone()을 수행해 변수에 저장을 먼저 해 주시고
+            // 저장된 요소는 appendTo를 이용해 추가해주세요.
+            var obj1Element = $(".obj1").clone();
+            console.log(obj1Element[0]);
+            obj1Element.appendTo("#list3");
+
+            // 8. #list3인 요소의 하위 li요소 중 첫 번째 요소의
+            // class= 에 무슨 값이 들어있는지
+            // 콘솔에 찍어주세요(.attr() 이용하기)
+            console.log($("#list3 > li").eq(1).attr("class"));
+
+
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrap">
+        <h2 class="theTitle">HTML조작</h2>
+        <ul id="list3">
+            <li class="obj1">list_2</li>
+            <li>list_3</li>
+            <li>list_4</li>
+            <li>list_5</li>
+        </ul>
+    </div>
+</body>
+</html>
