@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+        
+        <style>
+            /* 1. div의 직속자식인 .orange의 배경색 orange로 
+                2. body의 직속자식인 div의 직속자식인 div의 직속자식인
+                ul의 직속자식인 li 글씨색 green*/
+            div>.orange{
+                background: orange;
+            }
+            body>div>div>ul>li{
+                color:green;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <!-- div>ul>li*3 -->
+            <div>
+                <ul>
+                    <li id="apple" class="center">사과</li>
+                    <li>포도</li>
+                    <li>오렌지</li>
+                </ul>
+            </div>
+            <!--div+p+span-->
+            <div>당근</div>
+            <p id="tomato">토마토</p>
+            <span class="orange">오렌지</span>
+        </div>
+    </body>
+</html>

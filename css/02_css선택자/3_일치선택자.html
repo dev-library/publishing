@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+        <!--li태그이면서 class가 orange인 요소 배경색 오렌지색으로
+        p태그이면서 id가 tomato인 요소 배경색 토마토색으로
+        id가 apple이면서 클래스가 center인 요소 글씨색 빨간색으로
+        h1태그이면서클래스가 yellow, low, primary, center인요소 
+        배경색 파란색으로(힌트, .을 여러번 씁니다.)-->
+        <style>
+            li.orange{
+                background: orange;
+            }
+            p#tomato{
+                background: tomato;
+            }
+            .center#apple {
+                color:red;
+            }
+            h1.yellow.low.center.primary{
+                background: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="low yellow primary center">안녕하세요</h1>
+
+        <!--div>ul>li*3 입력시 자동으로 만들어줌-->
+        <div>
+            <ul>
+                <li id="apple" class="center">사과</li>
+                <li>포도</li>
+                <li class="orange">오렌지</li>
+            </ul>
+
+            <!--div+p+span-->
+            <div>당근</div>
+            <p id="tomato">토마토</p>
+            <span class="orange">오렌지</span>
+        </div>
+    </body>
+</html>

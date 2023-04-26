@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+        <!-- 클래스 fit은 bgc yellow 적용, 너비 글씨크기에 맞추도록 적용
+        클래스 orange는 글씨색 orangered 적용, 
+        아이디 tomato는 bgc tomato적용-->
+        <style>
+            .fit {
+                background-color: yellow;
+                width:fit-content;
+            }
+            .orange {
+                color:orangered;
+            }
+            #tomato {
+                background: tomato;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li class="fit">사과</li>
+            <li>포도</li>
+            <!-- .orange, .fit 둘 다 적용받음-->
+            <li class="orange fit">오렌지</li>
+        </ul>
+        <div>당근</div>
+        <p id="tomato">토마토</p>
+        <span class="orange">오렌지</span>
+    </body>
+</html>

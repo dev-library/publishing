@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+        <style>
+            /* 1. class orange의 다음 형제 li 배경색 orangered */
+            .orange + li {
+                background: orangered;
+            }
+            /* 2. tag li의 다음 형제 li 글씨 크기 24px */
+            li+li{
+                font-size:24px;
+            }
+
+            /* 여기부터는 일반 형제 선택자(다음 형제 전체)로 해 주세요*/
+            /* 클래스 red의 다음 형제 li들의 배경색 yellow*/
+            .red ~ li {
+                background: yellow;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li class="orange">어린쥐</li>
+            <li>사과</li>
+            <li>딸기</li>
+            <li class="orange">오렌지</li>
+            <li class="red">자몽</li>
+            <li>포도</li>
+            <li>레몬</li>
+            <li>한라봉</li>
+            <li>귤</li>
+        </ul>
+    </body>
+</html>
