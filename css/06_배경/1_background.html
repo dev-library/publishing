@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+        <style>
+            body {
+                /* background-image: url("/img/sky.jpg"); 
+                전체화면의 배경 이미지 지정시는 body태그를 
+                대상으로 잡는 경우가 많습니다.*/
+            }
+            .box {
+                width:550px;
+                height:350px;
+                border:4px dashed grey;
+                margin: 50px auto 0;
+
+                /* 배경 속성 */
+                background-color: orange;
+                background-image: url("/img/sky.jpg");
+
+                background-size: 150px 100px;/* 가로 세로 */
+                background-repeat:no-repeat;
+
+                background-position: 20px 100px; /* x  y*/
+
+                /* 위의 css 요소 종합 */
+                background: url("/img/sky.jpg") orange 
+                        no-repeat 150px 100px 20px 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <!-- src경로는 자동완성을 이용해주세요
+            ../ 나 / 나 . 등을 적고 자동완성해서 img폴더를 찾아주세요.-->
+            <!--<img src="/img/sky.jpg" alt="">-->
+        </div>
+    </body>
+</html>

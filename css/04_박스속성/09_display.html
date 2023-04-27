@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+        <style>
+            #hello {
+                background:red;
+                width:400px;
+                height:200px;
+                display:inline;
+            }
+            .box {
+                display:inline;
+            }
+            /* #hello가 hover상태일때만 inline-block이고
+            평소에는 inline이 되도록 해주세요.*/
+            #hello:hover {
+                display:inline-block;
+                background: lime;
+            }
+            .notice {
+                opacity: 0;
+            }
+            .notice:hover {
+                opacity: 1;
+            }
+            .box input:nth-child(2n){
+                display:none;
+            }
+        </style>
+    </head>
+    <body>
+
+        <span id="hello">
+            안녕하세요
+            <p class="notice">
+                이 메시지는, 마우스를 올려야만 보입니다.
+            </p>
+        </span>
+
+        <div class="box">
+            <input type="text" value="1">
+            <input type="text" value="2">
+            <input type="text" value="3">
+            <input type="text" value="4">
+            <input type="text" value="5">
+        </div>
+    </body>
+</html>
