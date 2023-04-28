@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang='ko'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Document</title>
+        <style>
+        .root {
+            width: 600px;
+            height: 500px;
+            border: 4px dashed orange;
+            padding: 100px;
+            font-size: 30px;
+            position: relative;
+        }
+        .parent {
+            width: 400px;
+            height: 300px;
+            border: 4px dashed blue;
+            padding: 50px;
+            position: relative;
+        }
+        .child {
+            width: 120px;
+            height: 80px;
+            border: 4px dashed red;
+            background: tomato;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 80px;
+        }
+        .abs {
+            position: absolute;
+            top: 50px;
+            right: 30px;
+        }
+        .parent a {
+            background: orange;
+            width: 100px;
+            height: 100px;
+            /* position: absolute; */
+            /* float: left; */
+
+            /* 
+                인라인 속성의 태그는
+                position: absolute나
+                float속성이 부여되면
+                자동으로 block성질로 변환
+            */
+        } 
+
+        /* 박스 좌우 상하 정중앙 배치 공식 
+        부모가 relative여야 쓸 수 있음!*/
+        .center {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        </style>
+    </head>
+    <body>
+        <div class="root">
+            <div class="parent center">
+                <div class="child">1</div>
+                <div class="child abs">2</div>
+                <div class="child">3</div>
+                <a href="#">4444</a>
+            </div>
+        </div>
+    </body>
+</html>
